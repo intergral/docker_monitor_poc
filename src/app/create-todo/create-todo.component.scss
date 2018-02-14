@@ -1,0 +1,27 @@
+ngx-section {
+  & .progress-linear {
+    top: 25px;
+  }
+
+  & ngx-input-suffix {
+    & .icon-x {
+      cursor: pointer;
+    }
+  }
+
+  & ngx-input {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & .button-container {
+    padding: 1em 0 0 0;
+
+    & ngx-button {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

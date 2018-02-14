@@ -1,0 +1,17 @@
+ngx-datatable {
+  & .tag {
+    margin: 5px;
+  }
+
+  & ngx-toggle {
+    margin: 0;
+  }
+  & .row-expander {
+    cursor: pointer;
+  }
+
+  & /deep/ .empty-row {
+    text-align: center;
+    padding: 1em;
+  }
+}
