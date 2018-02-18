@@ -2,18 +2,15 @@ import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 
 import {AppComponent} from "./app.component";
-import {NgxUIModule, PermissionService} from "@intergral/kaleidoscope";
+import {NgxUIModule} from "@intergral/kaleidoscope";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {CreateTodoComponent} from "./create-todo/create-todo.component";
-import {ViewTodoTableComponent} from "./view-todo-table/view-todo-table.component";
 import {NgxDatatableModule} from "@swimlane/ngx-datatable";
-import {TodoService} from "./services/todo.service";
+import {ViewTableComponent} from "./view-table/view-table.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        CreateTodoComponent,
-        ViewTodoTableComponent
+        ViewTableComponent
     ],
     imports: [
         BrowserModule,
@@ -21,10 +18,7 @@ import {TodoService} from "./services/todo.service";
         NgxUIModule,
         NgxDatatableModule
     ],
-    providers: [
-        PermissionService,
-        TodoService
-    ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {

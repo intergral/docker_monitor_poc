@@ -1,5 +1,5 @@
 import {Component, ViewChild} from "@angular/core";
-import {ViewTodoTableComponent} from "./view-todo-table/view-todo-table.component";
+import {ViewTableComponent} from "./view-table/view-table.component";
 
 @Component({
     selector: "app-root",
@@ -7,7 +7,7 @@ import {ViewTodoTableComponent} from "./view-todo-table/view-todo-table.componen
     styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-    @ViewChild(ViewTodoTableComponent) private tableViewer;
+    @ViewChild(ViewTableComponent) private tableViewer;
 
     constructor() {
 
