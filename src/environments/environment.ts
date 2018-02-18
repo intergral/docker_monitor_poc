@@ -6,6 +6,6 @@
 export const environment = {
     production: false,
     urls: {
-        rest: "cluster.bbn.intergral.com/metrics/" //v2
+        rest: "cluster.bbn.intergral.com/metrics/"
     }
 };

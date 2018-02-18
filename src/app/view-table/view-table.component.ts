@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
+import {DataResponseModel, EventBlock} from "../models/data-response.model";
+import {DataService} from "../services/data.service";
 
 @Component({
     selector: "app-view-table",
@@ -8,9 +10,9 @@ import {Component, OnInit, ViewChild} from "@angular/core";
 export class ViewTableComponent implements OnInit {
     @ViewChild("myTable") private table: any;
 
-    public items: Array<any> = [];
+    public items: Array<EventBlock> = [];
 
-    constructor() {
+    constructor(private _dataService: DataService) {
 
     }
 
@@ -19,11 +21,7 @@ export class ViewTableComponent implements OnInit {
     }
 
     public refresh() {
-        // this._todoService.getTodoList()
-        //     .subscribe(todoList => this.todoList = [...todoList]);
-    }
-
-    public toggleExpandRow(row) {
-        this.table.rowDetail.toggleExpandRow(row);
+        this._dataService.get()
+            .subscribe((r: DataResponseModel) => this.items = [...r.responses]);
     }
 }
